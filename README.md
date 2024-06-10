@@ -1,4 +1,4 @@
-# CIT281 Project 2
+[p2-random-commits.txt](https://github.com/user-attachments/files/15780150/p2-random-commits.txt)# CIT281 Project 2
 
 ### Learning Objectives:
 <li>Gain experience using git via your CLI and Visual Studio Code (VSCode) Source Control</li>
@@ -13,20 +13,44 @@
 ### Code:
 
 #### p2-expressions.js
-<code>
-</code>
-
-#### p2-random-commits.txt
-<code>
-</code>
-
-#### p2-random-files.txt
-<code>
-</code>
+<code>getRandomInteger = (min, max) => {
+    return Math.floor(Math.random() * (max - min) + min);
+  } 
+  getRandomLetter = () => {
+    const alphabet = "abcdefghijklmnopqrstuvwxyz";
+    return alphabet[getRandomInteger(0, alphabet.length)];
+  }
+  getRandomString = (minLength, maxLength) => {
+    let result = "";
+    for (let i = 0; i < getRandomInteger(minLength,maxLength + 1); i++) {
+    result += getRandomLetter();
+  }
+    return result;
+  }
+  getSortedString = (string) => {
+    return string.split("").sort().join(''); 
+  }
+  console.log(getSortedString("xpacd"));</code>
 
 #### p2-random.js
-<code>
-</code>
+<code>function getRandomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
+function getRandomLetter() {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  return alphabet[getRandomInteger(0, alphabet.length)];
+}
+function getRandomString(minLength, maxLength) {
+  let result = "";
+  for (let i = 0; i < getRandomInteger(minLength,maxLength + 1); i++) {
+  result += getRandomLetter();
+}
+  return result;
+}
+function getSortedString(string) {
+  return string.split("").sort().join(''); 
+}
+console.log(getSortedString("xpacd"));</code>
   
 ### Photos:
 <img width="1237" alt="p2-vscode-diff" src="https://github.com/mayasykes1/cit281-p2/assets/52678410/5ac0bd08-f747-4ac5-9109-c97b2ee16f95">
